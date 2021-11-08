@@ -11,8 +11,8 @@
 		"styles:build": "postcss css/*.sss --dir dist --ext css -c postcss.config.js",
 		"ts:watch": "npx swc ts -d dist -w",
 		"ts:build": "npx swc ts -d dist",
-		"critical:watch": "postcss --watch css/critical/*.sss --dir includes --ext css -c postcss.config.js",
-		"critical:build": "postcss css/critical/*.sss --dir includes --ext css -c postcss.config.js",
+		"critical:watch": "postcss --watch css/critical/*.sss --dir views/includes --ext css -c postcss.config.js",
+		"critical:build": "postcss css/critical/*.sss --dir views/includes --ext css -c postcss.config.js",
 		"browsersync:start": "browser-sync start --p localhost:8080 -w 'ts' 'css' 'assets' 'content' 'views/**/*.njk' --no-inject-changes"
 	},
 	"repository": {
@@ -26,7 +26,11 @@
 	},
 	"homepage": "https://github.com/frzrbox/startline#readme",
 	"dependencies": {
-		"@amagaki/amagaki": "^1.6.2",
+		"@amagaki/amagaki": "^1.6.2"
+	},
+	"devDependencies": {
+		"sugarss": "^4.0.1",
+		"typescript": "^4.4.4",
 		"autoprefixer": "^10.4.0",
 		"browser-sync": "^2.27.7",
 		"cssnano": "^5.0.10",
@@ -36,11 +40,6 @@
 		"postcss-mixins": "^8.1.0",
 		"postcss-nested": "^5.0.6",
 		"postcss-simple-vars": "^6.0.3",
-		"sass": "^1.43.4",
-		"sugarss": "^4.0.1",
-		"typescript": "^4.4.4"
-	},
-	"devDependencies": {
 		"@swc/cli": "^0.1.51",
 		"@swc/core": "^1.2.107",
 		"chokidar": "^3.5.2",

@@ -1,10 +1,4 @@
-import {
-	Document,
-	NunjucksPlugin,
-	Pod,
-	StaticFile,
-	Url,
-} from "@amagaki/amagaki";
+import { Document, NunjucksPlugin, StaticFile, Url } from "@amagaki/amagaki";
 
 module.exports = function (pod) {
 	pod.configure({
@@ -42,8 +36,7 @@ module.exports = function (pod) {
 		return `${Url.relative(object, this.ctx.doc)}`;
 	});
 
-	nunucksPlugin.addFilter("log", function (value: any) {
+	nunjucksPlugin.addFilter("log", function (value: any) {
 		console.log("log", value);
 	});
 };
-j;

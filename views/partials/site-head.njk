@@ -1,0 +1,23 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{doc.fields.title}}</title>
+  <meta name="description" value="{{doc.fields.description}}">
+
+  <style>  
+    {% include "../includes/critical.css" %} 
+    {% if doc.fields.enable_critical == true %} 
+      {% include "../includes/" + doc.fields.title | lower + ".css" %}
+    {% endif %}
+  </style>
+
+  <link rel="stylesheet" href="{{pod.staticFile('/dist/main.css')|url}}">
+
+  {% if doc.fields.stylesheet %}
+    {% for stylesheet in doc.fields.stylesheet %}
+      <link rel="stylesheet" href="{{pod.staticFile(stylesheet)|url}}">
+    {% endfor %}
+  {% endif %}
+
+  <script src="{{pod.staticFile('/dist/main.js')|url}}"></script>
+</head>

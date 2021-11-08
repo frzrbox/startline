@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{doc.locale.id}}">
+  {% include "./partials/site-head.njk" %}
+  <body>
+    {% include "./partials/header.njk" %}
+
+    <main class="main">
+      {% block content %}{% endblock %}
+    </main>
+
+    {% include "./partials/footer.njk" %}
+  </body>
+</html>
+
