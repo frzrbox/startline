@@ -1,10 +1,4 @@
-import {
-	Document,
-	NunjucksPlugin,
-	Pod,
-	StaticFile,
-	Url,
-} from "@amagaki/amagaki";
+import { Document, NunjucksPlugin, StaticFile, Url } from "@amagaki/amagaki";
 
 module.exports = function (pod) {
 	pod.configure({

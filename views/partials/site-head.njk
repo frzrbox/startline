@@ -4,9 +4,13 @@
   <title>{{doc.fields.title}}</title>
   <meta name="description" value="{{doc.fields.description}}">
 
-  <style> 
-    {% include "../includes/" + doc.fields.title + '.css' %}
+  {#
+  <style>  
+      {% if doc.fields.enable_critical == true %} 
+        {% include "../includes/" + doc.fields.title | lower + ".css" %}
+      {% endif %}
   </style>
+  #}
 
   <link rel="stylesheet" href="{{pod.staticFile('/dist/main.css')|url}}">
 
