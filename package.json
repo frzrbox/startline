@@ -1,14 +1,34 @@
 {
-  "dependencies": {
-    "@amagaki/amagaki": "^1.6.2",
-    "browser-sync": "^2.27.7",
-    "sass": "^1.43.4",
-    "typescript": "^4.4.4"
-  },
-  "devDependencies": {
-    "@swc/cli": "^0.1.51",
-    "@swc/core": "^1.2.107",
-    "chokidar": "^3.5.2",
-    "npm-run-all": "^4.1.5"
-  }
+	"name": "startline",
+	"description": "An Amagaki starter using PostCSS, Typescript and SWC",
+	"version": "0.0.1",
+	"main": "index.js",
+	"scripts": {
+		"styles:watch": "postcss --watch css/*.sss --dir dist --ext css -c postcss.config.js",
+		"styles:build": "postcss css/*.sss --dir dist --ext css -c postcss.config.js",
+		"critical:watch": "postcss --watch css/critical/*.sss --dir includes --ext css -c postcss.config.js",
+		"critical:build": "postcss css/critical/*.sss --dir includes --ext css -c postcss.config.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/frzrbox/startline.git"
+	},
+	"author": "frzrbox",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/frzrbox/startline/issues"
+	},
+	"homepage": "https://github.com/frzrbox/startline#readme",
+	"dependencies": {
+		"@amagaki/amagaki": "^1.6.2",
+		"browser-sync": "^2.27.7",
+		"sass": "^1.43.4",
+		"typescript": "^4.4.4"
+	},
+	"devDependencies": {
+		"@swc/cli": "^0.1.51",
+		"@swc/core": "^1.2.107",
+		"chokidar": "^3.5.2",
+		"npm-run-all": "^4.1.5"
+	}
 }
