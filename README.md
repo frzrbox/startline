@@ -31,8 +31,8 @@ created in this directory will be globally available to all other files in the
 `css/main.sss`
 
 ```sugarss
-// Since the color-red mixin is in the mixins directory
-there is no need to import it
+/* Since the color-red mixin is in the mixins directory
+there is no need to import it */
 
 .hero__heading
   @mixin color-red
