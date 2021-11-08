@@ -1,14 +1,47 @@
 {
-  "dependencies": {
-    "@amagaki/amagaki": "^1.6.2",
-    "browser-sync": "^2.27.7",
-    "sass": "^1.43.4",
-    "typescript": "^4.4.4"
-  },
-  "devDependencies": {
-    "@swc/cli": "^0.1.51",
-    "@swc/core": "^1.2.107",
-    "chokidar": "^3.5.2",
-    "npm-run-all": "^4.1.5"
-  }
+	"name": "startline",
+	"description": "An Amagaki starter using PostCSS, Typescript and SWC",
+	"version": "0.0.1",
+	"main": "index.js",
+	"scripts": {
+		"start": "amagaki serve",
+		"build": "npm-run-all --parallel ts:build styles:build critical:build && amagaki build",
+		"dev": "npm-run-all --parallel ts:watch styles:watch critical:watch start browsersync:start",
+		"styles:watch": "postcss --watch css/*.sss --dir dist --ext css -c postcss.config.js",
+		"styles:build": "postcss css/*.sss --dir dist --ext css -c postcss.config.js",
+		"critical:watch": "postcss --watch css/critical/*.sss --dir includes --ext css -c postcss.config.js",
+		"critical:build": "postcss css/critical/*.sss --dir includes --ext css -c postcss.config.js",
+		"browsersync:start": "browser-sync start --p localhost:8080 -w 'ts' 'css' 'assets' 'content' 'views/**/*.njk' --no-inject-changes"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/frzrbox/startline.git"
+	},
+	"author": "frzrbox",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/frzrbox/startline/issues"
+	},
+	"homepage": "https://github.com/frzrbox/startline#readme",
+	"dependencies": {
+		"@amagaki/amagaki": "^1.6.2",
+		"autoprefixer": "^10.4.0",
+		"browser-sync": "^2.27.7",
+		"cssnano": "^5.0.10",
+		"postcss": "^8.3.11",
+		"postcss-cli": "^9.0.2",
+		"postcss-easy-import": "^3.0.0",
+		"postcss-mixins": "^8.1.0",
+		"postcss-nested": "^5.0.6",
+		"postcss-simple-vars": "^6.0.3",
+		"sass": "^1.43.4",
+		"sugarss": "^4.0.1",
+		"typescript": "^4.4.4"
+	},
+	"devDependencies": {
+		"@swc/cli": "^0.1.51",
+		"@swc/core": "^1.2.107",
+		"chokidar": "^3.5.2",
+		"npm-run-all": "^4.1.5"
+	}
 }
