@@ -42,8 +42,7 @@ module.exports = function (pod) {
 		return `${Url.relative(object, this.ctx.doc)}`;
 	});
 
-	nunucksPlugin.addFilter("log", function (value: any) {
+	nunjucksPlugin.addFilter("log", function (value: any) {
 		console.log("log", value);
 	});
 };
-j;
