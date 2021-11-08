@@ -4,10 +4,14 @@
 	"version": "0.0.1",
 	"main": "index.js",
 	"scripts": {
+		"start": "amagaki serve",
+		"build": "npm-run-all --parallel ts:build styles:build critical:build && amagaki build",
+		"dev": "npm-run-all --parallel ts:watch styles:watch critical:watch start browsersync:start",
 		"styles:watch": "postcss --watch css/*.sss --dir dist --ext css -c postcss.config.js",
 		"styles:build": "postcss css/*.sss --dir dist --ext css -c postcss.config.js",
 		"critical:watch": "postcss --watch css/critical/*.sss --dir includes --ext css -c postcss.config.js",
-		"critical:build": "postcss css/critical/*.sss --dir includes --ext css -c postcss.config.js"
+		"critical:build": "postcss css/critical/*.sss --dir includes --ext css -c postcss.config.js",
+		"browsersync:start": "browser-sync start --p localhost:8080 -w 'ts' 'css' 'assets' 'content' 'views/**/*.njk' --no-inject-changes"
 	},
 	"repository": {
 		"type": "git",
