@@ -14,10 +14,11 @@ syntax for styling. All styles can be handled in the `css` directory.
 
 You can customize your folder structure however you like, but some directories
 to pay attention to are the `critical` and `mixins` folders. You can read more
-about the `critical` directory [here](#critical-styles). The `mixins` directory
-contains the mixins for the site, using the `postcss-mixins` plugin any mixin
-created in this directory will be globally available to all other files in the
-`css` directory.
+about the `critical` directory [here](#critical-styles).
+
+The `mixins` directory contains the mixins for the site, using the
+`postcss-mixins` plugin any mixin created in this directory will be globally
+available to all other files in the `css` directory.
 
 **Example**
 
