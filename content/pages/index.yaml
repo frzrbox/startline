@@ -1,3 +1,4 @@
 title: Home
 description: Home page description
 $view: /views/base.njk
+enable_critical: true
