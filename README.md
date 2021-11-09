@@ -2,7 +2,8 @@
 
 An Amagaki starter using PostCSS, Typescript and SWC
 
-**Get Started**
+## Get Started
+
 `npm run dev`
 
 ## Built In-Features
