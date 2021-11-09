@@ -7,6 +7,10 @@ An Amagaki starter using PostCSS, Typescript and SWC
 - [PostCSS](#postcss)
 - [Critical Styles](#critical-styles)
 
+## Issues / Feature Requests
+
+Report any [bugs or suggestions for new features](https://github.com/frzrbox/startline/issues)
+
 ## PostCSS
 
 By default Startline use the [Sugarss](https://github.com/postcss/sugarss)
