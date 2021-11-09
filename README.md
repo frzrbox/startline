@@ -1,4 +1,4 @@
-# Startline
+🏁 # Startline 🏁
 
 An Amagaki starter using PostCSS, Typescript and SWC
 
