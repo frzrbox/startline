@@ -2,18 +2,18 @@
 
 An Amagaki starter using PostCSS, Typescript and SWC
 
-## Get Started
+## Get Started 🚀
 
 `npm run dev`
+
+## Issues / Feature Requests ⚠️
+
+Report any [bugs or suggestions for new features](https://github.com/frzrbox/startline/issues)
 
 ## Built In-Features
 
 - [PostCSS](#postcss)
 - [Critical Styles](#critical-styles)
-
-## Issues / Feature Requests
-
-Report any [bugs or suggestions for new features](https://github.com/frzrbox/startline/issues)
 
 ## PostCSS
 
