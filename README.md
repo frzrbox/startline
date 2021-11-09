@@ -2,6 +2,9 @@
 
 An Amagaki starter using PostCSS, Typescript and SWC
 
+**Get Started**
+`npm run dev`
+
 ## Built In-Features
 
 - [PostCSS](#postcss)
