@@ -10,7 +10,7 @@ An Amagaki starter using PostCSS, Typescript and SWC
 
 Report any [bugs or suggestions for new features](https://github.com/frzrbox/startline/issues)
 
-## Built In-Features
+## Built-In Features
 
 - [PostCSS](#postcss)
 - [Critical Styles](#critical-styles)
