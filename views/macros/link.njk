@@ -1,0 +1,12 @@
+{% macro render(params, label, class, options) %}
+  {% set url = pod.doc(params.doc.podPath, doc.locale).url.path if params.doc else params.url %}
+
+  <a 
+    href="{{url}}" 
+    class="{{class}}"
+    {% if options.target == '_blank' %}
+     target="_blank" 
+     rel="noopener noreferrer"
+    {% endif %}
+  >{{label}}</a>
+{% endmacro %}
