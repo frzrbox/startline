@@ -1,6 +1,6 @@
 title: Home
 description: Home page description
-$view: /views/base.njk
+$view: /views/home.njk
 enable_critical: true
 
 partials:
