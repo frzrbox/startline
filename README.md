@@ -1,6 +1,6 @@
 # Startline 🏁
 
-An Amagaki starter using PostCSS, Typescript and SWC
+An Amagaki starter using PostCSS, Typescript and ESBuild
 
 ## Get Started 🚀
 
