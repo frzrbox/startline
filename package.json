@@ -1,6 +1,6 @@
 {
 	"name": "startline",
-	"description": "An Amagaki starter using PostCSS, Typescript and SWC",
+	"description": "An Amagaki starter using PostCSS, Typescript and ESBuild",
 	"version": "0.0.1",
 	"main": "index.js",
 	"scripts": {
