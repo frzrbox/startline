@@ -1,3 +1,2 @@
-const project: string = "Startline";
-
-console.log(`Welcome to ${project}`);
+import { message } from "./message";
+console.log(`Welcome to ${message}`);
