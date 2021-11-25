@@ -1,12 +1,14 @@
-{% macro render(params, label, class, options) %}
-  {% set url = pod.doc(params.doc.podPath, doc.locale).url.path if params.doc else params.url %}
+{% macro render(params) %}
+  {% set url = pod.doc(params.link.doc.podPath, doc.locale).url.path if params.link.doc else params.link.url %}
 
   <a 
-    href="{{url}}" 
-    class="{{class}}"
-    {% if options.target == '_blank' %}
+    href="{{url}}"  
+    {% if params.classes %} 
+      class="{% for class in params.classes %}{{class}}{% endfor %}"
+    {% endif %}
+    {% if target == '_blank' %}
      target="_blank" 
      rel="noopener noreferrer"
     {% endif %}
-  >{{label}}</a>
+  >{{params.label | safe}}</a>
 {% endmacro %}
