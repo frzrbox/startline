@@ -1,0 +1,35 @@
+{% set default_breakpoints = {
+  mobile: '768px',
+  tablet: '1024px',
+  laptop: '1440px',
+  desktop: '1600px'
+}%}
+
+{% set default_regex = r/\w*mobile|tablet|laptop|desktop\w*/g %}
+
+{% macro render(image) %}
+  <picture class="{% if image.class%}{{image.class}}{% endif %}{% for class in image.classes%} {{class}}{% endfor %}"
+    {% for key, value in image.attributes %}
+      data-{{key}}="{{value}}" 
+    {% endfor %}
+    >
+    {# Loop through the breakpoints array and determine whether to use a default screen breakpoint
+    or custom screen width#}
+    {% for breakpoint, source in image.breakpoints %}
+      <source media="(min-width: {% if default_regex.test(breakpoint) -%}
+        {% for key, value in default_breakpoints -%}
+          {% if key === breakpoint -%}{{value}}{%- endif %}
+        {%- endfor %}
+      {%- else %}{{breakpoint}}{%- endif %})" srcset="{{source}}"></source>
+    {% endfor %} 
+    <img class="{{image.class}}__image" 
+      loading="lazy"
+      {% if image.height %}
+         height="{{image.height}}" 
+      {% endif %}
+      {% if image.width %}
+         width="{{image.width}}" 
+      {% endif %}
+      src="{{image.default}}" alt="{{image.alt}}">
+  </picture>
+{% endmacro %}

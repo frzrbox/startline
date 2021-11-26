@@ -6,5 +6,16 @@ enable_critical: true
 partials:
     - partial: homepage-hero
       title: !IfLocale
-        en: Hello
-        ja: おはよう
+        en: !pod.string Hello
+        ja: !pod.string おはよう
+      image:
+        default: !pod.string /static/img/hero-image-small.jpg
+        breakpoints:
+          laptop: !pod.string /static/img/hero-image-large.jpg 
+          1200px: !pod.string /static/img/hero-image-medium.jpg
+        alt: !pod.string Clemens van Lay 
+        class: homepage-hero__picture
+        height: 500
+        width: 1200
+        attributes:
+          state: visible 

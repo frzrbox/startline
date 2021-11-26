@@ -1,3 +1,6 @@
+{% import '/views/macros/image.njk' as image %}
+
 <div class="homepage-hero">
   <h1 class="homepage-hero__title">{{partial.title}}</h1>
+  {{image.render(partial.image)}}
 </div>

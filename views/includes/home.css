@@ -1,1 +1,1 @@
-body{--bg-color:#fff;--text-color:#000;background:var(--bg-color);color:var(--text-color)}@media screen and (min-width:1024px){body{--bg-color:#000;--text-color:#fff}}
+.homepage-hero__picture__image{height:auto;width:100%}body{--bg-color:#fff;--text-color:#000;background:var(--bg-color);color:var(--text-color)}@media screen and (min-width:1024px){body{--bg-color:#000;--text-color:#fff}}
