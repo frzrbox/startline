@@ -18,6 +18,14 @@
         {%- endfor %}
       {%- else %}{{breakpoint}}{%- endif %})" srcset="{{source}}"></source>
     {% endfor %} 
-    <img class="{{image.class}}__image" src="{{image.default}}" alt="{{image.alt}}">
+    <img class="{{image.class}}__image" 
+      loading="lazy"
+      {% if image.height %}
+         height="{{image.height}}" 
+      {% endif %}
+      {% if image.width %}
+         width="{{image.width}}" 
+      {% endif %}
+      src="{{image.default}}" alt="{{image.alt}}">
   </picture>
 {% endmacro %}

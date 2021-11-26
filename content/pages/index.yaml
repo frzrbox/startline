@@ -16,3 +16,5 @@ partials:
             1200px: 1200
             desktop: desktop-image
         class: homepage-hero__picture
+        height: 500
+        width: 1200
