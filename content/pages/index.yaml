@@ -6,11 +6,11 @@ enable_critical: true
 partials:
     - partial: homepage-hero
       title: !IfLocale
-        en: Hello
-        ja: おはよう
+        en: !pod.string Hello
+        ja: !pod.string おはよう
       image:
         default: default
-        alt: this is the alt
+        alt: !pod.string Clemens van Lay 
         breakpoints:
             mobile: mobile-image
             1200px: 1200
