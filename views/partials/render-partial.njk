@@ -1,0 +1,3 @@
+{% for partial in doc.fields.partials %}
+  {% include "/views/partials/" + partial.partial + '.njk' %}
+{% endfor %}

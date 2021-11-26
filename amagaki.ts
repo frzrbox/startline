@@ -7,7 +7,7 @@ module.exports = function (pod) {
 		},
 		localization: {
 			defaultLocale: "en",
-			locales: ["en", "fr", "it", "ja"],
+			locales: ["en", "ja"],
 		},
 		staticRoutes: [
 			{

@@ -14,6 +14,7 @@ Report any [bugs or suggestions for new features](https://github.com/frzrbox/sta
 
 - [PostCSS](#postcss)
 - [Critical Styles](#critical-styles)
+- [Built-in Macros](#built-in-macros)
 
 ## PostCSS
 
@@ -72,4 +73,46 @@ enable_critical: true
 ```sugarss
 .about
   background: red
+```
+
+## Built-in Macros
+
+### Link
+
+The link macro will automatcially detect and navigate to the correct locale and path.
+It will accept an object with the following fields.
+
+| Params  | Description                                                                |
+| ------- | -------------------------------------------------------------------------- |
+| link    | Has a `doc` or `url` field                                                 |
+| label   | The content of the link                                                    |
+| classes | A list where each value adds a class to the element                        |
+| target  | The `target` value of the link, will not show if the value is not `_blank` |
+
+**Example**
+
+```yaml
+cta:
+  link:
+    doc: !pod.doc /content/pages/about.njk
+  label: !pod.string Go to about
+  classes:
+    - about__cta
+```
+
+```njk
+{% import '/views/macros/link.njk' as link with context %}
+
+<div class="demo">
+  {{link.render(cta)}}
+</div>
+```
+
+**Output**
+
+```njk
+{# If the !pod.doc function is used on the link.doc property, the href value
+will change depending on the current locale of the document #}
+
+<a class="about__cta" href="/about">Go to about</a>
 ```

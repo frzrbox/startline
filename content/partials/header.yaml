@@ -1,0 +1,4 @@
+branding:
+  link:
+    doc: !pod.doc /content/pages/index.yaml
+  label: <h1>Startline</h1>

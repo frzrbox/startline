@@ -1,3 +1,7 @@
+{% import '/views/macros/link.njk' as link with context %}
+
+{% set header = pod.doc('/content/partials/header.yaml', doc.locale).fields %}
+
 <header>
-  <h1>Startline</h1>
+  {{link.render(header.branding)}}
 </header>
