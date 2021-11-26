@@ -8,3 +8,11 @@ partials:
       title: !IfLocale
         en: Hello
         ja: おはよう
+      image:
+        default: default
+        alt: this is the alt
+        breakpoints:
+            mobile: mobile-image
+            1200px: 1200
+            desktop: desktop-image
+        class: homepage-hero__picture
