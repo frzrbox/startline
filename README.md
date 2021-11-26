@@ -121,16 +121,16 @@ will change depending on the current locale of the document #}
 
 The image macro renders out a dynamic `picture` element with some other useful params.
 
-| Params      | Descriptions                                                                             |
-| ----------- | ---------------------------------------------------------------------------------------- |
-| default     | The default fallback image if no breakpoints are specified (make this the largest image) |
-| breakpoints | An object that can take in key, value pairs of the breakpoint and image source           |
-| alt         | Image alt text                                                                           |
-| class       | Class that is added to the element                                                       |
-| classes     | A list of classes to add to the element                                                  |
-| height      | Image height                                                                             |
-| width       | Image width                                                                              |
-| attributes  | An object that can take in key, value pairs of the attribute name and value              |
+| Params      | Descriptions                                                                              |
+| ----------- | ----------------------------------------------------------------------------------------- |
+| default     | The default fallback image if no breakpoints are specified (make this the smallest image) |
+| breakpoints | An object that can take in key, value pairs of the breakpoint and image source            |
+| alt         | Image alt text                                                                            |
+| class       | Class that is added to the element                                                        |
+| classes     | A list of classes to add to the element                                                   |
+| height      | Image height                                                                              |
+| width       | Image width                                                                               |
+| attributes  | An object that can take in key, value pairs of the attribute name and value               |
 
 **Breakpoints**
 
@@ -143,7 +143,7 @@ Default breakpoints are:
 - `desktop`: 1600px
 
 **Note**: The macro uses `min-width` for the `source` elements so make sure to keep the larger
-breakpoints on the top of the list and the `default` param the largest source
+breakpoints on the top of the list and the `default` param the smallest source
 
 ```yaml
 partial: homepage-hero
