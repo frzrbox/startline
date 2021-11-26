@@ -16,7 +16,7 @@ module.exports = function (pod) {
 			},
 			{
 				path: "/static/img/",
-				staticDir: "assets/img/",
+				staticDir: "/assets/img/",
 			},
 		],
 	});
