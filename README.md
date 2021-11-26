@@ -107,3 +107,12 @@ cta:
   {{link.render(cta)}}
 </div>
 ```
+
+**Output**
+
+```njk
+{# If the !pod.doc function is used on the link.doc property, the href value
+will change depending on the current locale of the document #}
+
+<a class="about__cta" href="/about">Go to about</a>
+```
