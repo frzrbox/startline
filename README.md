@@ -137,13 +137,13 @@ The image macro renders out a dynamic `picture` element with some other useful p
 The `breakpoints` param can either take in a string of default breakpoints or custom breakpoints.
 Default breakpoints are:
 
-**Note**: The macro uses `min-width` for the `source` elements so make sure to keep the larger
-breakpoints on the top of the list and the `default` param the largest source
-
 - `mobile`: 768px
 - `tablet`: 1024px
 - `laptop`: 1440px
 - `desktop`: 1600px
+
+**Note**: The macro uses `min-width` for the `source` elements so make sure to keep the larger
+breakpoints on the top of the list and the `default` param the largest source
 
 ```yaml
 partial: homepage-hero
