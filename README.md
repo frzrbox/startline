@@ -116,3 +116,74 @@ will change depending on the current locale of the document #}
 
 <a class="about__cta" href="/about">Go to about</a>
 ```
+
+### Image
+
+The image macro renders out a dynamic `picture` element with some other useful params.
+
+| Params      | Descriptions                                                                             |
+| ----------- | ---------------------------------------------------------------------------------------- |
+| default     | The default fallback image if no breakpoints are specified (make this the largest image) |
+| breakpoints | An object that can take in key, value pairs of the breakpoint and image source           |
+| alt         | Image alt text                                                                           |
+| class       | Class that is added to the element                                                       |
+| classes     | A list of classes to add to the element                                                  |
+| height      | Image height                                                                             |
+| width       | Image width                                                                              |
+| attributes  | An object that can take in key, value pairs of the attribute name and value              |
+
+**Breakpoints**
+
+The `breakpoints` param can either take in a string of default breakpoints or custom breakpoints.
+Default breakpoints are:
+
+**Note**: The macro uses `min-width` for the `source` elements so make sure to keep the larger
+breakpoints on the top of the list and the `default` param the largest source
+
+- `mobile`: 768px
+- `tablet`: 1024px
+- `laptop`: 1440px
+- `desktop`: 1600px
+
+```yaml
+partial: homepage-hero
+image:
+  default: !pod.string /static/default-image.png
+  breakpoints:
+    tablet: !pod.string /static/tablet-image.png
+    2000px: !pod.string/static/custom-breakpoint-image.png
+```
+
+**Example**
+
+```yaml
+image:
+  default: !pod.string /static/img/hero-image-small.jpg
+  breakpoints:
+    laptop: !pod.string /static/img/hero-image-large.jpg
+    1200px: !pod.string /static/img/hero-image-medium.jpg
+  alt: !pod.string Clemens van Lay
+  class: homepage-hero__picture
+  height: 500
+  width: 1200
+  attributes:
+    state: visible
+```
+
+```nunjucks
+{% import '/views/macros/image.njk' as image %}
+
+<div class="homepage-hero">
+  {{image.render(partial.image)}}
+</div>
+```
+
+**Output**
+
+```njk
+<picture class="homepage-hero__picture" data-state="visible">
+  <source media="(min-width: 1440px)" srcset="/static/img/hero-image-large.jpg">
+  <source media="(min-width: 1200px)" srcset="/static/img/hero-image-medium.jpg">
+  <img class="homepage-hero__picture__image" loading="lazy" height="500" width="1200" src="/static/img/hero-image-small.jpg" alt="Clemens van Lay">
+</picture>
+```
