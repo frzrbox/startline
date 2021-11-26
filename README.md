@@ -75,14 +75,14 @@ enable_critical: true
   background: red
 ```
 
-## Build-in Macros
+## Built-in Macros
 
 ### Link
 
 The link macro will automatcially detect and navigate to the correct locale and path.
 It will accept an object with the following fields.
 
-| Params  | Descriptions                                                               |
+| Params  | Description                                                                |
 | ------- | -------------------------------------------------------------------------- |
 | link    | Has a `doc` or `url` field                                                 |
 | label   | The content of the link                                                    |
