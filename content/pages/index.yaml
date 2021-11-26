@@ -9,12 +9,11 @@ partials:
         en: !pod.string Hello
         ja: !pod.string おはよう
       image:
-        default: default
-        alt: !pod.string Clemens van Lay 
+        default: !pod.string /static/img/hero-image-small.jpg
         breakpoints:
-            mobile: mobile-image
-            1200px: 1200
-            desktop: desktop-image
+          laptop: !pod.string /static/img/hero-image-large.jpg 
+          1200px: !pod.string /static/img/hero-image-medium.jpg
+        alt: !pod.string Clemens van Lay 
         class: homepage-hero__picture
         height: 500
         width: 1200
